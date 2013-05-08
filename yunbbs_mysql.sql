@@ -132,7 +132,6 @@ CREATE TABLE yunbbs_users (
   regtime int(10) unsigned NOT NULL default '0',
   lastposttime int(10) unsigned NOT NULL default '0',
   lastreplytime int(10) unsigned NOT NULL default '0',
-  expires int(10) unsigned NOT NULL default '0',
   about text NOT NULL,
   notic text NOT NULL,
   PRIMARY KEY  (id),
