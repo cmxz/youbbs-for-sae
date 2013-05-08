@@ -117,11 +117,6 @@ INSERT INTO yunbbs_settings VALUES('ad_sider_top', '');
 INSERT INTO yunbbs_settings VALUES('ad_web_bot', '');
 INSERT INTO yunbbs_settings VALUES('main_nodes', '2');
 INSERT INTO yunbbs_settings VALUES('spam_words', '');
-INSERT INTO yunbbs_settings VALUES('qq_scope', 'get_user_info');
-INSERT INTO yunbbs_settings VALUES('qq_appid', '');
-INSERT INTO yunbbs_settings VALUES('qq_appkey', '');
-INSERT INTO yunbbs_settings VALUES('wb_key', '');
-INSERT INTO yunbbs_settings VALUES('wb_secret', '');
 
 DROP TABLE IF EXISTS yunbbs_users;
 CREATE TABLE yunbbs_users (
