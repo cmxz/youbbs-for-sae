@@ -227,7 +227,7 @@ echo '
     </tr>
     <tr>
         <td width="120" align="right">用户注册需要验证</td>
-        <td width="auto" align="left"><input type="text" class="sl w50" name="register_review" value="',$options['register_review'],'" /> 默认0（不用验证），若需要管理员验证就设为1（适合内部交流）</td>
+        <td width="auto" align="left"><input type="text" class="sl w50" name="register_review" value="',$options['register_review'],'" /> 默认1（需要管理员验证），若想开放注册就设置为0</td>
     </tr>
     <tr>
         <td width="120" align="right">关闭用户注册</td>
