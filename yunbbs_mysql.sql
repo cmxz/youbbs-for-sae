@@ -88,7 +88,7 @@ INSERT INTO yunbbs_settings VALUES('article_title_max_len', '60');
 INSERT INTO yunbbs_settings VALUES('article_content_max_len', '3000');
 INSERT INTO yunbbs_settings VALUES('article_post_space', '3');
 INSERT INTO yunbbs_settings VALUES('reg_ip_space', '3600');
-INSERT INTO yunbbs_settings VALUES('comment_min_len', '4');
+INSERT INTO yunbbs_settings VALUES('comment_min_len', '1');
 INSERT INTO yunbbs_settings VALUES('comment_max_len', '1200');
 INSERT INTO yunbbs_settings VALUES('commentlist_num', '32');
 INSERT INTO yunbbs_settings VALUES('comment_post_space', '20');
