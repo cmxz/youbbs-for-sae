@@ -95,20 +95,6 @@ echo '
 }
 
 
-if(isset($newest_nodes) && $newest_nodes){
-echo '
-<div class="sider-box">
-    <div class="sider-box-title">最近添加的分类</div>
-    <div class="sider-box-content">
-    <div class="btn">';
-foreach( $newest_nodes as $k=>$v ){
-    echo '<a href="/',$k,'">',$v,'</a>';
-}
-echo '    </div>
-    <div class="c"></div>
-    </div>
-</div>';
-}
 
 if(isset($links) && $links){
 echo '
