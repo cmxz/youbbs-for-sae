@@ -194,7 +194,7 @@ echo '
     </tr>
     <tr>
         <td width="120" align="right">回复内容最少字数</td>
-        <td width="auto" align="left"><input type="text" class="sl w100" name="comment_min_len" value="',$options['comment_min_len'],'" /> 默认4</td>
+        <td width="auto" align="left"><input type="text" class="sl w100" name="comment_min_len" value="',$options['comment_min_len'],'" /> 默认1</td>
     </tr>
     <tr>
         <td width="120" align="right">回复内容最多字数</td>
@@ -206,7 +206,7 @@ echo '
     </tr>
     <tr>
         <td width="120" align="right">发表回复最小间隔时间</td>
-        <td width="auto" align="left"><input type="text" class="sl w100" name="comment_post_space" value="',$options['comment_post_space'],'" /> 默认20</td>
+        <td width="auto" align="left"><input type="text" class="sl w100" name="comment_post_space" value="',$options['comment_post_space'],'" /> 默认3</td>
     </tr>
     <tr>
         <td width="120" align="right">注册最小间隔时间</td>
@@ -223,7 +223,7 @@ echo '
     </tr>
     <tr>
         <td width="120" align="right">只给登录用户访问</td>
-        <td width="auto" align="left"><input type="text" class="sl w50" name="authorized" value="',$options['authorized'],'" /> 默认0（公开），若要只给登录用户访问就设为1（适合内部交流）</td>
+        <td width="auto" align="left"><input type="text" class="sl w50" name="authorized" value="',$options['authorized'],'" /> 默认1（私密）</td>
     </tr>
     <tr>
         <td width="120" align="right">用户注册需要验证</td>
