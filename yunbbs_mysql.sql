@@ -95,7 +95,7 @@ INSERT INTO yunbbs_settings VALUES('comment_post_space', '20');
 INSERT INTO yunbbs_settings VALUES('close', '0');
 INSERT INTO yunbbs_settings VALUES('close_note', '数据调整中');
 INSERT INTO yunbbs_settings VALUES('authorized', '0');
-INSERT INTO yunbbs_settings VALUES('register_review', '0');
+INSERT INTO yunbbs_settings VALUES('register_review', '1');
 INSERT INTO yunbbs_settings VALUES('close_register', '0');
 INSERT INTO yunbbs_settings VALUES('close_upload', '0');
 INSERT INTO yunbbs_settings VALUES('ext_list', '');
