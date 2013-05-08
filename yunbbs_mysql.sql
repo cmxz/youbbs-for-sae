@@ -115,7 +115,7 @@ INSERT INTO yunbbs_settings VALUES('ad_post_top', '');
 INSERT INTO yunbbs_settings VALUES('ad_post_bot', '');
 INSERT INTO yunbbs_settings VALUES('ad_sider_top', '');
 INSERT INTO yunbbs_settings VALUES('ad_web_bot', '');
-INSERT INTO yunbbs_settings VALUES('main_nodes', '');
+INSERT INTO yunbbs_settings VALUES('main_nodes', '2');
 INSERT INTO yunbbs_settings VALUES('spam_words', '');
 INSERT INTO yunbbs_settings VALUES('qq_scope', 'get_user_info');
 INSERT INTO yunbbs_settings VALUES('qq_appid', '');
