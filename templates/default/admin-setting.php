@@ -190,7 +190,7 @@ echo '
     </tr>
     <tr>
         <td width="120" align="right">发帖子最小间隔时间</td>
-        <td width="auto" align="left"><input type="text" class="sl w100" name="article_post_space" value="',$options['article_post_space'],'" />秒 默认60</td>
+        <td width="auto" align="left"><input type="text" class="sl w100" name="article_post_space" value="',$options['article_post_space'],'" />秒 默认3</td>
     </tr>
     <tr>
         <td width="120" align="right">回复内容最少字数</td>
