@@ -77,10 +77,6 @@ echo '
         <td width="120" align="right"></td>
         <td width="auto" align="left"><input type="submit" value=" 保 存 " name="submit" class="textbtn" /></td>
     </tr>
-    <tr bgcolor="#EEE" height="24">
-        <td width="120" align="right"> » 附件设置</td>
-        <td width="auto" align="left">参考 <a href="http://youbbs.sinaapp.com/t-199" target="_blank">YouBBS和又拍云结合</a></td>
-    </tr>
     <tr>
         <td width="120" align="right">关闭上传附件功能</td>
         <td width="auto" align="left"><input type="text" class="sl w50" name="close_upload" value="',$options['close_upload'],'" /> 默认0（开放），若不想开放上传功能就设为1</td>
