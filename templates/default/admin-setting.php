@@ -109,7 +109,7 @@ echo '
     </tr>
     <tr>
         <td width="120" align="right">主分类id</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="main_nodes" value="',$options['main_nodes'],'" /> 默认留空，发新帖时可选的主分类id，用逗号隔开 <a href="http://youbbs.sinaapp.com/t-427" title="查看帮助" target="_blank">?</a></td>
+        <td width="auto" align="left"><input type="text" class="sl w200" name="main_nodes" value="',$options['main_nodes'],'" /> 默认为2（谈天说地分类），发新帖时可选的主分类id，用逗号隔开 <a href="http://youbbs.sinaapp.com/t-427" title="查看帮助" target="_blank">?</a></td>
     </tr>
     <tr>
         <td width="120" align="right">放在页面头部<br/>head标签里面的<br/>meta或其它信息<br/>(默认留空)</td>
