@@ -30,8 +30,8 @@ CREATE TABLE yunbbs_categories (
   KEY articles (articles)
 ) ENGINE=MyISAM ;
 
-INSERT INTO yunbbs_categories VALUES(1, '水区', 0, '');
-INSERT INTO yunbbs_categories VALUES(2, '默认分类', 0, '');
+INSERT INTO yunbbs_categories VALUES(1, '垃圾桶', 0, '');
+INSERT INTO yunbbs_categories VALUES(2, '谈天说地', 0, '');
 
 DROP TABLE IF EXISTS yunbbs_tags;
 CREATE TABLE yunbbs_tags (
@@ -63,6 +63,7 @@ CREATE TABLE yunbbs_links (
   PRIMARY KEY  (id)
 ) ENGINE=MyISAM ;
 
+INSERT INTO yunbbs_links VALUES(null,'BBS4Private', 'http://BBS4Private.sinaapp.com');
 INSERT INTO yunbbs_links VALUES(null,'YouBBS', 'http://youbbs.sinaapp.com');
 
 DROP TABLE IF EXISTS yunbbs_settings;
@@ -73,14 +74,14 @@ CREATE TABLE yunbbs_settings (
 ) ENGINE=MyISAM ;
 
 
-INSERT INTO yunbbs_settings VALUES('name', 'youbbs');
-INSERT INTO yunbbs_settings VALUES('site_des', '又是一个YouBBS');
+INSERT INTO yunbbs_settings VALUES('name', 'BBS4Private');
+INSERT INTO yunbbs_settings VALUES('site_des', '一个私密论坛');
 INSERT INTO yunbbs_settings VALUES('site_create', '0');
 INSERT INTO yunbbs_settings VALUES('icp', '');
 INSERT INTO yunbbs_settings VALUES('admin_email', '');
 INSERT INTO yunbbs_settings VALUES('home_shownum', '20');
 INSERT INTO yunbbs_settings VALUES('list_shownum', '20');
-INSERT INTO yunbbs_settings VALUES('newest_node_num', '20');
+--INSERT INTO yunbbs_settings VALUES('newest_node_num', '20');   --删除最近添加分类数
 INSERT INTO yunbbs_settings VALUES('hot_node_num', '20');
 INSERT INTO yunbbs_settings VALUES('bot_node_num', '100');
 INSERT INTO yunbbs_settings VALUES('article_title_max_len', '60');
