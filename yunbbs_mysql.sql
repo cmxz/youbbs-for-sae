@@ -154,29 +154,3 @@ CREATE TABLE yunbbs_favorites (
   KEY uid (uid)
 ) ENGINE=MyISAM ;
 
-DROP TABLE IF EXISTS yunbbs_qqweibo;
-CREATE TABLE yunbbs_qqweibo (
-  id mediumint(8) unsigned NOT NULL auto_increment,
-  uid mediumint(8) unsigned NOT NULL default '0',
-  name varchar(20) NOT NULL default '',
-  openid char(32) NOT NULL,
-  token varchar(40) NOT NULL default '',
-  expires int(10) unsigned NOT NULL default '0',
-  PRIMARY KEY (id),
-  KEY uid (uid),
-  KEY openid (openid)
-) ENGINE=MyISAM ;
-
-DROP TABLE IF EXISTS yunbbs_weibo;
-CREATE TABLE yunbbs_weibo (
-  id mediumint(8) unsigned NOT NULL auto_increment,
-  uid mediumint(8) unsigned NOT NULL default '0',
-  name varchar(20) NOT NULL default '',
-  openid char(12) NOT NULL,
-  token varchar(40) NOT NULL default '',
-  expires int(10) unsigned NOT NULL default '0',
-  PRIMARY KEY (id),
-  KEY uid (uid),
-  KEY openid (openid)
-) ENGINE=MyISAM ;
-
