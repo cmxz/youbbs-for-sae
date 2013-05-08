@@ -91,7 +91,7 @@ INSERT INTO yunbbs_settings VALUES('reg_ip_space', '3600');
 INSERT INTO yunbbs_settings VALUES('comment_min_len', '1');
 INSERT INTO yunbbs_settings VALUES('comment_max_len', '1200');
 INSERT INTO yunbbs_settings VALUES('commentlist_num', '32');
-INSERT INTO yunbbs_settings VALUES('comment_post_space', '20');
+INSERT INTO yunbbs_settings VALUES('comment_post_space', '3');
 INSERT INTO yunbbs_settings VALUES('close', '0');
 INSERT INTO yunbbs_settings VALUES('close_note', '数据调整中');
 INSERT INTO yunbbs_settings VALUES('authorized', '0');
