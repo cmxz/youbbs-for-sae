@@ -98,7 +98,6 @@ INSERT INTO yunbbs_settings VALUES('authorized', '0');
 INSERT INTO yunbbs_settings VALUES('register_review', '1');
 INSERT INTO yunbbs_settings VALUES('close_register', '0');
 INSERT INTO yunbbs_settings VALUES('ext_list', '');
-INSERT INTO yunbbs_settings VALUES('img_shuiyin', '0');
 INSERT INTO yunbbs_settings VALUES('show_debug', '0');
 INSERT INTO yunbbs_settings VALUES('jquery_lib', '/static/js/jquery-1.6.4.js');
 INSERT INTO yunbbs_settings VALUES('head_meta', '');
