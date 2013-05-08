@@ -4,7 +4,7 @@ if (!defined('IN_SAESPOT')) exit('error: 403 Access Denied');
 if($cur_user && $cur_user['flag']>=99){
 echo '
 <div class="sider-box">
-    <div class="sider-box-title">管理员面板 （<a href="http://youbbs.sinaapp.com/" target="_blank">YouBBS官方支持</a>）</div>
+    <div class="sider-box-title">管理员面板 （<a href="http://BBS4Private.sinaapp.com/" target="_blank">官方支持</a>）</div>
     <div class="sider-box-content">
     <div class="btn">
     <a href="/admin-node">分类管理</a><a href="/admin-setting">网站设置</a><a href="/admin-user-list">用户管理</a><a href="/admin-link-list">链接管理</a>';
