@@ -141,20 +141,6 @@ echo '
 }
 
 
-if(isset($newest_nodes) && $newest_nodes){
-echo '
-<div class="title">最近添加的分类</div>
-<div class="main-box main-box-node">
-<div class="btn">';
-foreach( $newest_nodes as $k=>$v ){
-    echo '<a href="/',$k,'">',$v,'</a>';
-}
-echo '
-<div class="c"></div>
-</div>
-
-</div>';
-}
 
 
 if(isset($bot_nodes) && !$is_spider){

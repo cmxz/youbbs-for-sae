@@ -80,7 +80,6 @@ INSERT INTO yunbbs_settings VALUES('icp', '');
 INSERT INTO yunbbs_settings VALUES('admin_email', '');
 INSERT INTO yunbbs_settings VALUES('home_shownum', '20');
 INSERT INTO yunbbs_settings VALUES('list_shownum', '20');
-INSERT INTO yunbbs_settings VALUES('newest_node_num', '20');
 INSERT INTO yunbbs_settings VALUES('hot_node_num', '20');
 INSERT INTO yunbbs_settings VALUES('bot_node_num', '100');
 INSERT INTO yunbbs_settings VALUES('article_title_max_len', '60');
