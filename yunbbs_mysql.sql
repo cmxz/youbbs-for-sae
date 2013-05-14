@@ -30,8 +30,8 @@ CREATE TABLE yunbbs_categories (
   KEY articles (articles)
 ) ENGINE=MyISAM ;
 
-INSERT INTO yunbbs_categories VALUES(1, '水区', 0, '');
-INSERT INTO yunbbs_categories VALUES(2, '默认分类', 0, '');
+INSERT INTO yunbbs_categories VALUES(1, '垃圾桶', 0, '');
+INSERT INTO yunbbs_categories VALUES(2, '谈天说地', 0, '');
 
 DROP TABLE IF EXISTS yunbbs_tags;
 CREATE TABLE yunbbs_tags (
