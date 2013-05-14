@@ -190,10 +190,6 @@ echo '
         <td width="auto" align="left"><input type="text" class="sl w100" name="list_shownum" value="',$options['list_shownum'],'" /> 默认20</td>
     </tr>
     <tr>
-        <td width="120" align="right">最近添加的分类数</td>
-        <td width="auto" align="left"><input type="text" class="sl w100" name="newest_node_num" value="',$options['newest_node_num'],'" /> 默认20</td>
-    </tr>
-    <tr>
         <td width="120" align="right">最热主题数</td>
         <td width="auto" align="left"><input type="text" class="sl w100" name="hot_node_num" value="',$options['hot_node_num'],'" /> 默认20（要小于',$options['bot_node_num'],'）</td>
     </tr>
