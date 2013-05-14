@@ -90,10 +90,7 @@ echo '
         <td width="auto" align="left"><input type="text" class="sl" name="ext_list" value="',$options['ext_list'],'" /> <br/>默认留空（任何文件），用逗号分隔</td>
     </tr>
     
-    <tr>
-        <td width="120" align="right">是否添加图片水印</td>
-        <td width="auto" align="left"><input type="text" class="sl w50" name="img_shuiyin" value="',$options['img_shuiyin'],'" /> 默认0（不加水印），若想添加（网址）水印则设为1</td>
-    </tr>
+
     <tr>
         <td width="120" align="right"></td>
         <td width="auto" align="left">附件默认上传到服务器，若要上传到又拍云请正确填写下面三个信息，否则留空</td>
