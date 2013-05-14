@@ -4,7 +4,7 @@ if (!defined('IN_SAESPOT')) exit('error: 403 Access Denied');
 echo '
 <div class="title">
     <div class="float-left fs14">
-        <a href="/">',$options['name'],'</a> &raquo; 最近更新 • <a rel="nofollow" href="/feed">Atom Feed</a>
+        <a href="/">',$options['name'],'</a> &raquo; 最近更新
     </div>';
 if($cur_user && $cur_user['flag']>4 && $newest_nodes){
     //echo '<div class="float-right grey">请先选择相关主题再发帖</div>';

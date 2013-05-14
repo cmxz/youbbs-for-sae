@@ -10,7 +10,7 @@ echo '
         }
 echo '    </div>';
 if($cur_user && $cur_user['flag']>4){
-    echo '<div class="float-right"><a href="/newpost/',$cid,'" rel="nofollow" class="newpostbtn">+发新帖</a></div>';
+    echo '<div class="float-right"><a href="/newpost/',$cid,'" rel="nofollow" class="newpostbtn">发 新 帖</a></div>';
 }
 echo '    <div class="c"></div>
 </div>

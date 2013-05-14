@@ -7,7 +7,7 @@ echo '
         <a href="/">',$options['name'],'</a> &raquo; <a href="/n/',$c_obj['id'],'">',$c_obj['name'],'</a> (',$c_obj['articles'],')
     </div>';
 if($cur_user && $cur_user['flag']>4){
-    echo '<div class="float-right"><a href="/newpost/',$t_obj['cid'],'" rel="nofollow" class="newpostbtn">+发新帖</a></div>';
+    echo '<div class="float-right"><a href="/newpost/',$t_obj['cid'],'" rel="nofollow" class="newpostbtn">发 新 帖</a></div>';
 }
 echo '    <div class="c"></div>
 </div>

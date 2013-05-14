@@ -6,7 +6,7 @@ echo '
     <div class="float-left fs14">
         <a href="/">',$options['name'],'</a> &raquo; 第',$page,'页 / 共',$taltol_page,'页</div>';
 if($cur_user && $cur_user['flag']>4){
-    echo '<div class="float-right"><a href="/newpost/1" rel="nofollow" class="newpostbtn">+发新帖</a></div>';
+    echo '<div class="float-right"><a href="/newpost/1" rel="nofollow" class="newpostbtn">发 新 帖</a></div>';
 }
 echo '    <div class="c"></div>
 </div>
