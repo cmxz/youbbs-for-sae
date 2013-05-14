@@ -63,7 +63,7 @@ CREATE TABLE yunbbs_links (
   PRIMARY KEY  (id)
 ) ENGINE=MyISAM ;
 
-INSERT INTO yunbbs_links VALUES(null,'YouBBS', 'http://youbbs.sinaapp.com');
+INSERT INTO yunbbs_links VALUES(null,'BBS4Private', 'http://BBS4Private.sinaapp.com');
 
 DROP TABLE IF EXISTS yunbbs_settings;
 CREATE TABLE yunbbs_settings (
@@ -73,8 +73,8 @@ CREATE TABLE yunbbs_settings (
 ) ENGINE=MyISAM ;
 
 
-INSERT INTO yunbbs_settings VALUES('name', 'youbbs');
-INSERT INTO yunbbs_settings VALUES('site_des', '又是一个YouBBS');
+INSERT INTO yunbbs_settings VALUES('name', 'BBS4Private');
+INSERT INTO yunbbs_settings VALUES('site_des', '一个朋友交流的平台');
 INSERT INTO yunbbs_settings VALUES('site_create', '0');
 INSERT INTO yunbbs_settings VALUES('icp', '');
 INSERT INTO yunbbs_settings VALUES('admin_email', '');
@@ -83,17 +83,17 @@ INSERT INTO yunbbs_settings VALUES('list_shownum', '20');
 INSERT INTO yunbbs_settings VALUES('hot_node_num', '20');
 INSERT INTO yunbbs_settings VALUES('bot_node_num', '100');
 INSERT INTO yunbbs_settings VALUES('article_title_max_len', '60');
-INSERT INTO yunbbs_settings VALUES('article_content_max_len', '3000');
-INSERT INTO yunbbs_settings VALUES('article_post_space', '60');
+INSERT INTO yunbbs_settings VALUES('article_content_max_len', '5000');
+INSERT INTO yunbbs_settings VALUES('article_post_space', '5');
 INSERT INTO yunbbs_settings VALUES('reg_ip_space', '3600');
-INSERT INTO yunbbs_settings VALUES('comment_min_len', '4');
-INSERT INTO yunbbs_settings VALUES('comment_max_len', '1200');
+INSERT INTO yunbbs_settings VALUES('comment_min_len', '1');
+INSERT INTO yunbbs_settings VALUES('comment_max_len', '3000');
 INSERT INTO yunbbs_settings VALUES('commentlist_num', '32');
-INSERT INTO yunbbs_settings VALUES('comment_post_space', '20');
+INSERT INTO yunbbs_settings VALUES('comment_post_space', '3');
 INSERT INTO yunbbs_settings VALUES('close', '0');
 INSERT INTO yunbbs_settings VALUES('close_note', '数据调整中');
-INSERT INTO yunbbs_settings VALUES('authorized', '0');
-INSERT INTO yunbbs_settings VALUES('register_review', '0');
+INSERT INTO yunbbs_settings VALUES('authorized', '1');
+INSERT INTO yunbbs_settings VALUES('register_review', '1');
 INSERT INTO yunbbs_settings VALUES('close_register', '0');
 INSERT INTO yunbbs_settings VALUES('close_upload', '0');
 INSERT INTO yunbbs_settings VALUES('ext_list', '');
