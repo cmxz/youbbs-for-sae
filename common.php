@@ -313,4 +313,8 @@ function isemail($email) {
     return strlen($email) > 6 && preg_match("/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/", $email);
 }
 
+function simsimi($q){
+return file_get_contents('http://xiaofengrobot.sinaapp.com/api.php?text='.urlencode($q));
+}
+
 ?>
