@@ -353,10 +353,6 @@ if ($cur_user){
 
 // 页面变量
 $title = $t_obj['title'].' - '.$options['name'];
-$newest_nodes = get_newest_nodes();
-if(count($newest_nodes)==$options['newest_node_num']){
-    $bot_nodes = get_bot_nodes();
-}
 
 //$links = get_links();
 $meta_des = $c_obj['name'].' - '.$t_obj['author'].' - '.htmlspecialchars(mb_substr($t_obj['content'], 0, 150, 'utf-8'));

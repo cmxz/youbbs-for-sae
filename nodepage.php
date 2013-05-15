@@ -61,11 +61,6 @@ if(!$articledb){
 
 // 页面变量
 $title = $options['name'].' › '.$c_obj['name'];
-$newest_nodes = get_newest_nodes();
-if(count($newest_nodes)==$options['newest_node_num']){
-    $bot_nodes = get_bot_nodes();
-}
-
 $show_sider_ad = "1";
 //$links = get_links();
 

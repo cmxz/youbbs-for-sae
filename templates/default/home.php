@@ -6,7 +6,7 @@ echo '
     <div class="float-left fs14">
         <a href="/">',$options['name'],'</a> &raquo; 最近更新
     </div>';
-if($cur_user && $cur_user['flag']>4 && $newest_nodes){
+if($cur_user && $cur_user['flag']>4){
     //echo '<div class="float-right grey">请先选择相关主题再发帖</div>';
     echo '<div class="float-right"><a href="/newpost/2" rel="nofollow" class="newpostbtn">发 新 帖</a></div>';
 }
