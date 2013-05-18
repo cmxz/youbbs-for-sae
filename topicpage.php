@@ -195,12 +195,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 //添加是否at小黄鸡的判断
                 if(preg_match_all("/@小黄鸡/",$c_content,$temppp)!=0)
                 {
+                    $littlec=2;
                     $c_content=preg_replace("/@小黄鸡/", "",$c_content);
-                    $new_Content=simsimi($c_content);
-                    $DBM->query("INSERT INTO `yunbbs_comments` (`id`,`articleid`,`uid`,`addtime`,`content`) VALUES (null,$tid, $cur_uid, $timestamp, '$new_content')");
+                    $new_content=simsimi($c_content);
+                    $new_content="@".$cur_uname." ".$new_content;
+                    $DBM->query("INSERT INTO `yunbbs_comments` (`id`,`articleid`,`uid`,`addtime`,`content`) VALUES (null,$tid, $littlec, $timestamp, '$new_content')");
                     $new_rid = $DBM->insert_id();
-                    $DBM->unbuffered_query("UPDATE `yunbbs_articles` SET `ruid`='$cur_uid',`edittime`='$timestamp',`comments`=`comments`+1 WHERE `id`='$tid'");
-                    $DBM->unbuffered_query("UPDATE `yunbbs_users` SET `replies`=`replies`+1,`lastreplytime`='$timestamp' WHERE `id`='$cur_uid'");
+                    $DBM->unbuffered_query("UPDATE `yunbbs_articles` SET `ruid`='$littlec',`edittime`='$timestamp',`comments`=`comments`+1 WHERE `id`='$tid'");
+                    $DBM->unbuffered_query("UPDATE `yunbbs_users` SET `replies`=`replies`+1,`lastreplytime`='$timestamp' WHERE `id`='$littlec'");
 
                 }
                 // 更新u_code

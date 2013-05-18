@@ -118,6 +118,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $new_aid = $DBM->insert_id();
                     $DBM->unbuffered_query("UPDATE `yunbbs_categories` SET `articles`=`articles`+1 WHERE `id`='$cid'");
                     $DBM->unbuffered_query("UPDATE `yunbbs_users` SET `articles`=`articles`+1, `lastposttime`=$timestamp WHERE `id`='$cur_uid'");
+                    //发新帖时支持at小黄鸡
+                    if(preg_match_all("/@小黄鸡/",$p_content,$temppp)!=0)
+                    {
+                        $littlec=15;
+                        $p_content=preg_replace("/@小黄鸡/", "",$p_content);
+                        $new_content=simsimi($p_content);
+                        $new_content="@".$cur_uname." ".$new_content;
+                        $DBM->query("INSERT INTO `yunbbs_comments` (`id`,`articleid`,`uid`,`addtime`,`content`) VALUES (null,$new_aid, $littlec, $timestamp, '$new_content')");
+                        $new_rid = $DBM->insert_id();
+                    $DBM->unbuffered_query("UPDATE `yunbbs_articles` SET `ruid`='$littlec',`edittime`='$timestamp',`comments`=`comments`+1 WHERE `id`='$new_aid'");
+                    $DBM->unbuffered_query("UPDATE `yunbbs_users` SET `replies`=`replies`+1,`lastreplytime`='$timestamp' WHERE `id`='$littlec'");
+
+                }
                     // 更新u_code
                     $cur_user['lastposttime'] = $timestamp;
                     //
