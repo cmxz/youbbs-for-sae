@@ -28,8 +28,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_POST['list_shownum'] = intval($_POST['list_shownum']);
         if(!$_POST['list_shownum']) $_POST['list_shownum'] = 20;
 
-        $_POST['newest_node_num'] = intval($_POST['newest_node_num']);
-        if(!$_POST['newest_node_num']) $_POST['newest_node_num'] = 20;
 
         $_POST['hot_node_num'] = intval($_POST['hot_node_num']);
         if(!$_POST['hot_node_num']) $_POST['hot_node_num'] = 20;
@@ -41,22 +39,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if(!$_POST['article_title_max_len']) $_POST['article_title_max_len'] = 60;
 
         $_POST['article_content_max_len'] = intval($_POST['article_content_max_len']);
-        if(!$_POST['article_content_max_len']) $_POST['article_content_max_len'] = 3000;
+        if(!$_POST['article_content_max_len']) $_POST['article_content_max_len'] = 5000;
 
         $_POST['article_post_space'] = intval($_POST['article_post_space']);
-        if(!$_POST['article_post_space']) $_POST['article_post_space'] = 60;
+        if(!$_POST['article_post_space']) $_POST['article_post_space'] = 5;
 
         $_POST['comment_min_len'] = intval($_POST['comment_min_len']);
-        if(!$_POST['comment_min_len']) $_POST['comment_min_len'] = 4;
+        if(!$_POST['comment_min_len']) $_POST['comment_min_len'] = 1;
 
         $_POST['comment_max_len'] = intval($_POST['comment_max_len']);
-        if(!$_POST['comment_max_len']) $_POST['comment_max_len'] = 1200;
+        if(!$_POST['comment_max_len']) $_POST['comment_max_len'] = 3000;
 
         $_POST['commentlist_num'] = intval($_POST['commentlist_num']);
         if(!$_POST['commentlist_num']) $_POST['commentlist_num'] = 32;
 
         $_POST['comment_post_space'] = intval($_POST['comment_post_space']);
-        if(!$_POST['comment_post_space']) $_POST['comment_post_space'] = 20;
+        if(!$_POST['comment_post_space']) $_POST['comment_post_space'] = 3;
 
         $_POST['close'] = intval($_POST['close']);
 
@@ -71,7 +69,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_POST['close_register'] = intval($_POST['close_register']);
         $_POST['close_upload'] = intval($_POST['close_upload']);
         $_POST['show_debug'] = intval($_POST['show_debug']);
-        $_POST['img_shuiyin'] = intval($_POST['img_shuiyin']);
 
         $_POST['jquery_lib'] = filter_chr($_POST['jquery_lib']);
         if(!$_POST['jquery_lib']) $_POST['jquery_lib'] = '/static/js/jquery-1.6.4.js';
