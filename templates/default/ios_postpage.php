@@ -151,9 +151,7 @@ echo '    <form action="',$_SERVER["REQUEST_URI"],'#new-comment" method="post">
 <input type="hidden" name="formhash" value="',$formhash,'" />
     <p><textarea id="id-content" name="content" class="comment-text mll wb96">',htmlspecialchars($c_content),'</textarea></p>';
 
-echo '
-<label class="grey fs12"><input type="checkbox" name="send2wb" value="1" checked /> 同时发送到微博</label><br/><br/>
-';
+
 
 echo '
     <p><input type="submit" value=" 提 交 " name="submit" class="textbtn wb96" /></p>

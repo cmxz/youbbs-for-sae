@@ -41,19 +41,10 @@ echo '
 <div class="grey fs12">（如果标题已表述清楚，内容可以留空）</div>
 <p><textarea id="id-content" name="content" class="mll tall">',htmlspecialchars($p_content),'</textarea></p>
 ';
-if(!$options['close_upload'] && $cur_user['articles']>10){
-    include(ROOT . '/templates/default/upload.php');
-}else{
-    echo '<div class="float-right grey fs12">发满11个帖才能上传图片，可先贴微博里图片的url</div>';
-}
 echo '
 <p><div class="float-left">
 <input type="submit" value=" 发 表 " name="submit" class="textbtn" />';
 
-echo '
-&nbsp;&nbsp;&nbsp;&nbsp;
-<label class="grey fs12"><input type="checkbox" name="send2wb" value="1" checked /> 同时发送到微博</label>
-';
 
 echo '
 </div><div class="c"></div></p>

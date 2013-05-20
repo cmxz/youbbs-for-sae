@@ -63,11 +63,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $p_title = addslashes(trim($_POST['title']));
     $p_content = addslashes(trim($_POST['content']));
 
-    if($cur_user['articles']>10){
-        $send2wb = intval($_POST['send2wb']);
-    }else{
-        $send2wb = 1;
-    }
 
     if($p_title =='test' || $p_title=='测试'){
         exit('403: no test anymore.');
@@ -165,12 +160,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                         }
                     }
 
-                    // send to weibo
-                    if($send2wb && $cur_user['expires'] > $timestamp){
-                        $queue = new SaeTaskQueue('default');
-                        $queue->addTask("http://".$_SERVER['HTTP_HOST']."/task/sendmsg/topic/".$cur_uid."/".$new_aid);
-                        $queue->push();
-                    }
 
                     // set tags
                     if(!isset($queue)){
@@ -179,9 +168,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $queue->addTask("http://".$_SERVER['HTTP_HOST']."/task/fenci/".$new_aid);
                     $queue->push();
 
-                    // auto ping google & baidu
-                    $queue->addTask("http://".$_SERVER['HTTP_HOST']."/task/atping/".$new_aid);
-                    $queue->push();
 
 
                     // 保存内容md5值

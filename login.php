@@ -6,21 +6,6 @@ include(ROOT . '/config.php');
 include(ROOT . '/common.php');
 
 //
-// 屏蔽下面几行可以通过 用户名和密码 登录
-if(($options['qq_appid'] && $options['qq_appkey']) || ($options['wb_key'] && $options['wb_secret'])){
-    header("content-Type: text/html; charset=UTF-8");
-    echo '<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <h3>请用第三方帐户登录本站 <br/><br/>';
-    if($options['wb_key'] && $options['wb_secret']){
-        echo '&nbsp;&nbsp;<a href="/wblogin"><img src="/static/weibo_login_55_24.png" alt="微博登录" title="用微博帐号登录"/></a>';
-    }
-    if($options['qq_appid'] && $options['qq_appkey']){
-        echo '&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qqlogin"><img src="/static/qq_logo_55_24.png" alt="QQ登录" title="用QQ登录"/></a>';
-    }
-    echo '&nbsp;<br/><br/><a href="/">返回首页</a></h3>';
-    exit;
-}
-//
 
 if($cur_user){
     // 如果已经登录用户无聊打开这网址就让他重新登录吧

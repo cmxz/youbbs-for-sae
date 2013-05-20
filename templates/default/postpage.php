@@ -170,15 +170,7 @@ echo '    <form action="',$_SERVER["REQUEST_URI"],'#new-comment" method="post">
 <input type="hidden" name="formhash" value="',$formhash,'" />
     <p><textarea id="id-content" name="content" class="comment-text mll">',htmlspecialchars($c_content),'</textarea></p>';
 
-echo '
-<label class="grey fs12"><input type="checkbox" name="send2wb" value="1" checked /> 同时发送到微博</label>
-';
 
-if(!$options['close_upload'] && $cur_user['articles']>10){
-    include(ROOT . '/templates/default/upload.php');
-}else{
-    echo '<div class="float-right grey fs12">发满11个帖才能上传图片，可先贴微博里图片的url</div>';
-}
 
 echo '
     <p>

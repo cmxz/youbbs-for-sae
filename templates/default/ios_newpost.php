@@ -39,9 +39,6 @@ echo '
 <div class="grey fs12">（如果标题已表述清楚，内容可以留空）</div>
 <p><textarea id="id-content" name="content" class="mll wb96 tall">',htmlspecialchars($p_content),'</textarea></p>';
 
-echo '
-<label class="grey fs12"><input type="checkbox" name="send2wb" value="1" checked /> 同时发送到微博</label><br/>
-';
 
 echo '
 <p><input type="submit" value=" 发 表 " name="submit" class="textbtn wb96" /></p>
