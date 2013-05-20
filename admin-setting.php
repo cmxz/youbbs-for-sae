@@ -78,13 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_POST['upyun_user'] = filter_chr($_POST['upyun_user']);
         $_POST['upyun_pw'] = filter_chr($_POST['upyun_pw']);
 
-        // qq_scope
-        $qq_scope = filter_chr($_POST['qq_scope']);
-        if(!$qq_scope) $qq_scope = 'get_user_info';
-        if(!strpos(' '.$qq_scope, 'get_info') && !strpos(' '.$qq_scope, 'get_user_info')){
-            $qq_scope = 'get_user_info,'.$qq_scope;
-        }
-        $_POST['qq_scope'] = $qq_scope;
+
 
         // 安全图床域名白名单 格式 www.xxx.com
         $safe_imgdomain = trim($_POST['safe_imgdomain']);

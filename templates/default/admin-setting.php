@@ -41,43 +41,6 @@ echo '
         <td width="120" align="right"></td>
         <td width="auto" align="left"><input type="submit" value=" 保 存 " name="submit" class="textbtn" /></td>
     </tr>
-    <tr bgcolor="#EEE" height="24">
-        <td width="120" align="right"> » 微博登录设置</td>
-        <td width="auto" align="left">可选，不用则留空 <a href="http://youbbs.sinaapp.com/t-426" title="查看帮助" target="_blank">?</a></td>
-    </tr>
-    <tr>
-        <td width="120" align="right">App Key</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="wb_key" value="',$options['wb_key'],'" /></td>
-    </tr>
-    <tr>
-        <td width="120" align="right">App Secret</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="wb_secret" value="',$options['wb_secret'],'" /></td>
-    </tr>
-    <tr>
-        <td width="120" align="right"></td>
-        <td width="auto" align="left"><input type="submit" value=" 保 存 " name="submit" class="textbtn" /></td>
-    </tr>
-    <tr bgcolor="#EEE" height="24">
-        <td width="120" align="right"> » QQ登录设置</td>
-        <td width="auto" align="left">可选，不用则留空，参考 <a href="http://youbbs.sinaapp.com/t-263" target="_blank">在YouBBS用QQ登录</a></td>
-    </tr>
-    <tr>
-        <td width="120" align="right">scope</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="qq_scope" value="',$options['qq_scope'],'" /> 默认get_user_info，可选get_info</td>
-    </tr>
-    <tr>
-        <td width="120" align="right">appid</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="qq_appid" value="',$options['qq_appid'],'" /></td>
-    </tr>
-    <tr>
-        <td width="120" align="right">appkey</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="qq_appkey" value="',$options['qq_appkey'],'" /></td>
-    </tr>
-    <tr>
-        <td width="120" align="right"></td>
-        <td width="auto" align="left"><input type="submit" value=" 保 存 " name="submit" class="textbtn" /></td>
-    </tr>
-
     <tr>
         <td width="120" align="right">头像空间名称</td>
         <td width="auto" align="left"><input type="text" class="sl w200" name="upyun_avatar_domain" value="',$options['upyun_avatar_domain'],'" /> 需要建立两个缩略图!normal 48px 、 !mini 24px</td>
