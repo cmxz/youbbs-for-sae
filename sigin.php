@@ -5,19 +5,6 @@ define('ROOT' , pathinfo(__FILE__, PATHINFO_DIRNAME));
 include(ROOT . '/config.php');
 include(ROOT . '/common.php');
 
-// 屏蔽下面几行可以通过 用户名和密码 注册
-if(($options['qq_appid'] && $options['qq_appkey']) || ($options['wb_key'] && $options['wb_secret'])){
-    header("content-Type: text/html; charset=UTF-8");
-    echo '请用 ';
-    if($options['wb_key'] && $options['wb_secret']){
-        echo '&nbsp;<a href="/wblogin">微博登录</a>';
-    }
-    if($options['qq_appid'] && $options['qq_appkey']){
-        echo '&nbsp;<a href="/qqlogin">QQ登录</a>';
-    }
-    echo '&nbsp;<a href="/">返回首页</a>';
-    exit;
-}
 
 
 if($cur_user){
