@@ -67,7 +67,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_POST['authorized'] = intval($_POST['authorized']);
         $_POST['register_review'] = intval($_POST['register_review']);
         $_POST['close_register'] = intval($_POST['close_register']);
-        $_POST['close_upload'] = intval($_POST['close_upload']);
         $_POST['show_debug'] = intval($_POST['show_debug']);
 
         $_POST['jquery_lib'] = filter_chr($_POST['jquery_lib']);
@@ -141,22 +140,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $spam_words_arr = array_filter(array_unique($spam_words_arr));
         $_POST['spam_words'] = implode(",", $spam_words_arr);
 
-        // ext_list 扩展名列表
-        $_POST['ext_list'] = filter_chr($_POST['ext_list']);
-        if($_POST['ext_list'] && ($options['ext_list'] != $_POST['ext_list'] ) ){
-            $ext_list = str_replace(" ", ",", $_POST['ext_list']);
-            $ext_list = str_replace("/", ",", $ext_list);
-            $ext_list = str_replace("，", ",", $ext_list);
-            $ext_list = str_replace("。", ",", $ext_list);
-            $ext_list = str_replace("、", ",", $ext_list);
-            $ext_list_arr = explode(",", $ext_list);
-            $ext_list_arr = array_filter(array_unique($ext_list_arr));
-            if($ext_list_arr){
-                $_POST['ext_list'] = implode(",", $ext_list_arr);
-            }else{
-                $_POST['ext_list'] = '';
-            }
-        }
+
 
         $changed = 0;
         foreach($options as $k=>$v){

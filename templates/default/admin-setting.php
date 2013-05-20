@@ -77,24 +77,7 @@ echo '
         <td width="120" align="right"></td>
         <td width="auto" align="left"><input type="submit" value=" 保 存 " name="submit" class="textbtn" /></td>
     </tr>
-    <tr bgcolor="#EEE" height="24">
-        <td width="120" align="right"> » 附件设置</td>
-        <td width="auto" align="left">参考 <a href="http://youbbs.sinaapp.com/t-199" target="_blank">YouBBS和又拍云结合</a></td>
-    </tr>
-    <tr>
-        <td width="120" align="right">关闭上传附件功能</td>
-        <td width="auto" align="left"><input type="text" class="sl w50" name="close_upload" value="',$options['close_upload'],'" /> 默认0（开放），若不想开放上传功能就设为1</td>
-    </tr>
-    <tr>
-        <td width="120" align="right">允许扩展名</td>
-        <td width="auto" align="left"><input type="text" class="sl" name="ext_list" value="',$options['ext_list'],'" /> <br/>默认留空（任何文件），用逗号分隔</td>
-    </tr>
-    
 
-    <tr>
-        <td width="120" align="right"></td>
-        <td width="auto" align="left">附件默认上传到服务器，若要上传到又拍云请正确填写下面三个信息，否则留空</td>
-    </tr>
     <tr>
         <td width="120" align="right">头像空间名称</td>
         <td width="auto" align="left"><input type="text" class="sl w200" name="upyun_avatar_domain" value="',$options['upyun_avatar_domain'],'" /> 需要建立两个缩略图!normal 48px 、 !mini 24px</td>
