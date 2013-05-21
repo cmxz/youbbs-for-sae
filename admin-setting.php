@@ -162,8 +162,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //$DBM->query("DROP TABLE IF EXISTS `yunbbs_settings`");
         //$DBM->query("DROP TABLE IF EXISTS `yunbbs_users`");
         //$DBM->query("DROP TABLE IF EXISTS `yunbbs_favorites`");
-        //$DBM->query("DROP TABLE IF EXISTS `yunbbs_qqweibo`");
-        //$DBM->query("DROP TABLE IF EXISTS `yunbbs_weibo`");
 
         //$MMC->flush();
 
