@@ -89,12 +89,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $safe_imgdomain = str_replace("https://", "", $safe_imgdomain);
             $safe_imgdomain = str_replace("/", "", $safe_imgdomain);
             $safe_arr = explode("\n",$safe_imgdomain);
-            // 加入网站域名和又拍云的域名
+            // 加入网站域名
             if($_SERVER['HTTP_HOST']){
                 $safe_arr[] = $_SERVER['HTTP_HOST'];
-            }
-            if($_POST['upyun_domain']){
-                $safe_arr[] = $_POST['upyun_domain'].'.b0.upaiyun.com';
             }
             $safe_arr = array_filter(array_unique($safe_arr));
             $_POST['safe_imgdomain'] = implode("|", $safe_arr);
