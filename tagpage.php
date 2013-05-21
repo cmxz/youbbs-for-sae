@@ -95,10 +95,6 @@ if($tag_obj['articles']){
 
 // 页面变量
 $title = '标签： '.$tag.' - part '.$page;
-$newest_nodes = get_newest_nodes();
-if(count($newest_nodes)==$options['newest_node_num']){
-    $bot_nodes = get_bot_nodes();
-}
 
 $show_sider_ad = "1";
 
