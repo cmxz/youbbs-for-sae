@@ -157,11 +157,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $c_content = addslashes(trim($_POST['content']));
 
-    if($cur_user['articles']>10){
-        $send2wb = intval($_POST['send2wb']);
-    }else{
-        $send2wb = 1;
-    }
+
 
     if(($timestamp - $cur_user['lastreplytime']) > $options['comment_post_space']){
         $c_con_len = mb_strlen($c_content,'utf-8');
