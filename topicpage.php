@@ -240,12 +240,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     }
                 }
 
-                // send to weibo
-                if($send2wb && $cur_user['expires'] > $timestamp){
-                    $queue = new SaeTaskQueue('default');
-                    $queue->addTask("http://".$_SERVER['HTTP_HOST']."/task/sendmsg/reply/".$cur_uid."/".$new_rid);
-                    $queue->push();
-                }
 
                 // 保存内容md5值
                 $MMC->set('cm_'.$conmd5, '1', 0, 3600);
