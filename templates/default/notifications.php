@@ -14,7 +14,10 @@ foreach($articledb as $article){
 echo '
 <div class="post-list">
     <div class="item-avatar"><a href="/member/',$article['uid'],'">';
-    echo '<img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$article['uavatar'],'.jpg!normal" alt="',$article['author'],'" />';
+    if($article['uavatar'])
+        echo '<img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$article['uavatar'],'.normal.jpg" alt="',$article['author'],'" />';
+    else
+        echo '<img src="/static/grey.gif" data-original="/avatar/0.normal.jpg" alt="',$article['author'],'" />';
 echo '    </a></div>
     <div class="item-content">
         <h1><a href="/goto-t-',$article['id'],'">',$article['title'],'</a></h1>

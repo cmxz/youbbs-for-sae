@@ -12,8 +12,12 @@ if($articledb){
 
 foreach($articledb as $article){
 echo '
-<div class="post-list">
-    <div class="item-avatar"><a href="/member/',$article['uid'],'"><img src="',$options['base_avatar_url'],'/',$article['uavatar'],'.jpg!mini" alt="',$article['author'],'" /></a></div>
+<div class="post-list">';
+if($article['uavatar'])
+    echo'<div class="item-avatar"><a href="/member/',$article['uid'],'"><img src="',$options['base_avatar_url'],'/',$article['uavatar'],'.mini.jpg" alt="',$article['author'],'" /></a></div>';
+else
+    echo'<div class="item-avatar"><a href="/member/',$article['uid'],'"><img src="/avatar/0.mini.jpg" alt="',$article['author'],'" /></a></div>';
+echo'
     <div class="item-content count',$article['comments'],'">
         <h1><a href="/goto-t-',$article['id'],'">',$article['title'],'</a></h1>
         <span class="item-date"><a href="/n/',$article['cid'],'">',$article['cname'],'</a>';

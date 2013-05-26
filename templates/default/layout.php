@@ -74,7 +74,10 @@ echo '
         <div class="banner">';
 
 if($cur_user){
-    echo '<img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.jpg!mini" alt="',$cur_user['name'],'"/>&nbsp;&nbsp;&nbsp;';
+    if($cur_user['avatar'])
+        echo '<img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.mini.jpg" alt="',$cur_user['name'],'"/>&nbsp;&nbsp;&nbsp;';
+    else
+        echo '<img src="/avatar/0.mini.jpg" alt="',$cur_user['name'],'"/>&nbsp;&nbsp;&nbsp;';
 
     if(!$cur_user['password']){
         //echo '<a href="/setting#3" style="color:yellow;">设置登录密码</a>&nbsp;&nbsp;&nbsp;';

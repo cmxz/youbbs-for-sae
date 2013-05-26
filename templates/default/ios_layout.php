@@ -55,7 +55,10 @@ echo '
         <div class="banner">';
 
 if($cur_user){
-    echo '<a href="/member/',$cur_user['id'],'"><img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.jpg!mini" alt="',$cur_user['name'],'"/></a>&nbsp;&nbsp;<a href="/favorites">★</a>&nbsp;&nbsp;<a href="/setting">设置</a>&nbsp;&nbsp;<a href="/logout">退出</a>';
+    if($cur_user['avatar'])
+        echo '<a href="/member/',$cur_user['id'],'"><img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.mini.jpg" alt="',$cur_user['name'],'"/></a>&nbsp;&nbsp;<a href="/favorites">★</a>&nbsp;&nbsp;<a href="/setting">设置</a>&nbsp;&nbsp;<a href="/logout">退出</a>';
+    else
+        echo '<a href="/member/',$cur_user['id'],'"><img src="/avatar/0.mini.jpg" alt="',$cur_user['name'],'"/></a>&nbsp;&nbsp;<a href="/favorites">★</a>&nbsp;&nbsp;<a href="/setting">设置</a>&nbsp;&nbsp;<a href="/logout">退出</a>';
 }else{
     echo '&nbsp;<a href="/login" rel="nofollow">登录</a>';
         if(!$options['close_register']){
@@ -109,9 +112,6 @@ echo '
 <div class="main-box main-box-node">
 <div class="btn">
 <a href="/admin-node">分类管理</a><a href="/admin-setting">网站设置</a><a href="/admin-user-list">用户管理</a><a href="/admin-link-list">链接管理</a>';
-if($options['upyun_avatar_domain'] && $options['upyun_user'] && $options['upyun_pw']){
-    echo '<a href="/setdefaultavatar" title="一般只需设置一次">设置默认头像</a>';
-}
 
 echo '
 <div class="c"></div>

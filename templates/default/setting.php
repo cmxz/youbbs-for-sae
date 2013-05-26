@@ -44,11 +44,23 @@ echo '
 <table cellpadding="5" cellspacing="8" border="0" width="100%" class="fs12">
     <tbody><tr>
         <td width="120" align="right">当前头像</td>
-        <td width="auto" align="left">
-        <img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.jpg?',$av_time,'" class="avatar" border="0" align="default" auto=""> &nbsp; 
-        <img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.jpg!normal?',$av_time,'" class="avatar" border="0" align="default" auto=""> &nbsp; 
-        <img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.jpg!mini?',$av_time,'" class="avatar" border="0" align="default" auto="">
-        </td>
+        <td width="auto" align="left">'
+        if($cur_user['avatar'])
+        {
+            echo'
+            <img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.jpg',$av_time,'" class="avatar" border="0" align="default" auto=""> &nbsp; 
+            <img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.normal.jpg',$av_time,'" class="avatar" border="0" align="default" auto=""> &nbsp; 
+            <img src="',$options['base_avatar_url'],'/',$cur_user['avatar'],'.mini.jpg',$av_time,'" class="avatar" border="0" align="default" auto="">';
+        }
+        else
+        {
+            echo'
+            <img src="/avatar/0.jpg',$av_time,'" class="avatar" border="0" align="default" auto=""> &nbsp; 
+            <img src="/avatar/0.normal.jpg',$av_time,'" class="avatar" border="0" align="default" auto=""> &nbsp; 
+            <img src="/avatar/0.mini.jpg',$av_time,'" class="avatar" border="0" align="default" auto="">';
+        }
+        echo'
+            </td>
     </tr>
     <tr>
         <td width="120" align="right">选择头像图片</td>

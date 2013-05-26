@@ -36,8 +36,12 @@ if($cur_user && $cur_user['flag']>4){
     }
 }
 echo '        </div>
-    </div>
-    <div class="detail-avatar"><a href="/member/',$t_obj['uid'],'"><img src="',$options['base_avatar_url'],'/',$t_obj['uavatar'],'.jpg!normal" alt="',$t_obj['author'],'" />    </a></div>
+    </div>'
+    if($t_obj['uavatar'])
+        echo'<div class="detail-avatar"><a href="/member/',$t_obj['uid'],'"><img src="',$options['base_avatar_url'],'/',$t_obj['uavatar'],'.normal.jpg" alt="',$t_obj['author'],'" />    </a></div>';
+    else
+        echo'<div class="detail-avatar"><a href="/member/',$t_obj['uid'],'"><img src="/avatar/0.normal.jpg" alt="',$t_obj['author'],'" />    </a></div>';
+    echo'
     <div class="c"></div>
 </div>
 <div class="topic-content">';
@@ -75,8 +79,12 @@ $count_n = ($page-1)*$options['commentlist_num'];
 foreach($commentdb as $comment){
 $count_n += 1;
 echo '
-    <div class="commont-item">
-        <div class="commont-avatar"><a href="/member/',$comment['uid'],'"><img src="',$options['base_avatar_url'],'/',$comment['avatar'],'.jpg!mini" alt="',$comment['author'],'" /></a></div>
+    <div class="commont-item">'
+    if($comment['avatar'])
+        echo'<div class="commont-avatar"><a href="/member/',$comment['uid'],'"><img src="',$options['base_avatar_url'],'/',$comment['avatar'],'.mini.jpg" alt="',$comment['author'],'" /></a></div>';
+    else
+        echo'<div class="commont-avatar"><a href="/member/',$comment['uid'],'"><img src="/avatar/0.mini.jpg" alt="',$comment['author'],'" /></a></div>';
+    echo'
         <div class="commont-data">
             <div class="commont-content">
             <p>',$comment['content'],'</p>

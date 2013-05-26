@@ -17,8 +17,12 @@ echo '    <div class="c"></div>
 foreach($articledb as $article){
 echo '
 <div class="post-list">
-    <div class="item-avatar"><a href="/member/',$article['uid'],'">
-    <img src="',$options['base_avatar_url'],'/',$article['uavatar'],'.jpg!mini" alt="',$article['author'],'" />
+    <div class="item-avatar"><a href="/member/',$article['uid'],'">';
+    if($article['uavatar'])
+        echo '<img src="',$options['base_avatar_url'],'/',$article['uavatar'],'.normal.jpg" alt="',$article['author'],'" />';
+    else
+        echo '<img src="/avatar/0.normal.jpg" alt="',$article['author'],'" />';
+    echo '
     </a></div>
     <div class="item-content count',$article['comments'],'">
         <h1><a href="/t/',$article['id'],'">',$article['title'],'</a></h1>

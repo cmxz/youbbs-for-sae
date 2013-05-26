@@ -18,9 +18,15 @@ echo '
 <div class="post-list">
     <div class="item-avatar"><a href="/member/',$article['uid'],'">';
 if(!$is_spider){
-    echo '<img src="',$options['base_avatar_url'],'/',$article['uavatar'],'.jpg!normal" alt="',$article['author'],'" />';
+    if($article['uavatar'])
+        echo '<img src="',$options['base_avatar_url'],'/',$article['uavatar'],'.normal.jpg" alt="',$article['author'],'" />';
+    else
+        echo '<img src="/avatar/0.normal.jpg" alt="',$article['author'],'" />';
 }else{
-    echo '<img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$article['uavatar'],'.jpg!normal" alt="',$article['author'],'" />';
+    if($article['uavatar'])
+        echo '<img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$article['uavatar'],'.normal.jpg" alt="',$article['author'],'" />';
+    else
+        echo '<img src="/static/grey.gif" data-original="/avatar/0.normal.jpg" alt="',$article['author'],'" />';
 }
 echo '    </a></div>
     <div class="item-content">

@@ -41,9 +41,15 @@ echo '        </div>
     </div>
     <div class="detail-avatar"><a href="/member/',$t_obj['uid'],'">';
 if($is_spider){
-    echo '<img src="',$options['base_avatar_url'],'/',$t_obj['uavatar'],'.jpg" alt="',$t_obj['author'],'" />';
+    if($t_obj['uavatar'])
+        echo '<img src="',$options['base_avatar_url'],'/',$t_obj['uavatar'],'.jpg" alt="',$t_obj['author'],'" />';
+    else
+        echo '<img src="/avatar/0.jpg" alt="',$t_obj['author'],'" />';
 }else{
-    echo '<img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$t_obj['uavatar'],'.jpg" alt="',$t_obj['author'],'" />';
+    if($t_obj['uavatar'])
+        echo '<img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$t_obj['uavatar'],'.jpg" alt="',$t_obj['author'],'" />';
+    else
+        echo '<img src="/static/grey.gif" data-original="/avatar/0.jpg" alt="',$t_obj['author'],'" />';
 }
 echo '    </a></div>
     <div class="c"></div>
@@ -88,9 +94,15 @@ echo '<a name="',$comment['id'],'"></a>
     <div class="commont-item">
         <div class="commont-avatar"><a href="/member/',$comment['uid'],'">';
 if($is_spider){
-    echo '    <img src="',$options['base_avatar_url'],'/',$comment['avatar'],'.jpg!normal" alt="',$comment['author'],'" />';
+    if($comment['avatar'])
+        echo '    <img src="',$options['base_avatar_url'],'/',$comment['avatar'],'.normal.jpg" alt="',$comment['author'],'" />';
+    else
+        echo '    <img src="/avatar/0.normal.jpg" alt="',$comment['author'],'" />';
 }else{
-    echo '    <img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$comment['avatar'],'.jpg!normal" alt="',$comment['author'],'" />';
+    if($comment['avatar'])
+        echo '    <img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$comment['avatar'],'.normal.jpg" alt="',$comment['author'],'" />';
+    else
+        echo '    <img src="/static/grey.gif" data-original="/avatar/0.normal.jpg" alt="',$comment['author'],'" />';
 }
 echo '</a></div>
         <div class="commont-data">

@@ -6,8 +6,12 @@ echo '
     <a href="/">',$options['name'],'</a> &raquo; 会员：',$m_obj['name'],' 
 </div>
 
-<div class="main-box">
-<div class="member-avatar"><img src="',$options['base_avatar_url'],'/',$m_obj['avatar'],'.jpg" alt="',$m_obj['name'],'" /></div>
+<div class="main-box">'
+if($m_obj['avatar'])
+    echo'<div class="member-avatar"><img src="',$options['base_avatar_url'],'/',$m_obj['avatar'],'.jpg" alt="',$m_obj['name'],'" /></div>';
+else
+    echo'<div class="member-avatar"><img src="/avatar/0.jpg" alt="',$m_obj['name'],'" /></div>';
+echo'
 <div class="member-detail">
 <p>会员：<strong>',$m_obj['name'],'</strong> (第',$m_obj['id'],'号会员，',$m_obj['regtime'],'加入)';
 if($cur_user && $cur_user['flag']>=99){
@@ -48,9 +52,15 @@ echo '
 <div class="post-list">
     <div class="item-avatar"><a href="/member/',$m_obj['id'],'">';
 if($is_spider){
-    echo '<img src="',$options['base_avatar_url'],'/',$m_obj['avatar'],'.jpg!normal" alt="',$m_obj['name'],'" />';
+    if($m_obj['avatar'])
+        echo '<img src="',$options['base_avatar_url'],'/',$m_obj['avatar'],'.normal.jpg" alt="',$m_obj['name'],'" />';
+    else
+        echo '<img src="/avatar/0.normal.jpg" alt="',$m_obj['name'],'" />';
 }else{
-    echo '<img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$m_obj['avatar'],'.jpg!normal" alt="',$m_obj['name'],'" />';
+    if($m_obj['avatar'])
+        echo '<img src="/static/grey.gif" data-original="',$options['base_avatar_url'],'/',$m_obj['avatar'],'.normal.jpg" alt="',$m_obj['name'],'" />';
+    else
+        echo '<img src="/static/grey.gif" data-original="/avatar/0.normal.jpg" alt="',$m_obj['name'],'" />';
 }
 echo '    </a></div>
     <div class="item-content">
