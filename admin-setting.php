@@ -73,10 +73,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if(!$_POST['jquery_lib']) $_POST['jquery_lib'] = '/static/js/jquery-1.6.4.js';
 
         $_POST['safe_imgdomain'] = filter_chr($_POST['safe_imgdomain']);
-        $_POST['upyun_avatar_domain'] = filter_chr($_POST['upyun_avatar_domain']);
-        $_POST['upyun_domain'] = filter_chr($_POST['upyun_domain']);
-        $_POST['upyun_user'] = filter_chr($_POST['upyun_user']);
-        $_POST['upyun_pw'] = filter_chr($_POST['upyun_pw']);
+        $_POST['SAE_STORAGE'] = filter_chr($_POST['SAE_STORAGE']);
 
 
 

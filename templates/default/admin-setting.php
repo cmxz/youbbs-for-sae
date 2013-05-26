@@ -38,31 +38,13 @@ echo '
         <td width="auto" align="left"><input type="text" class="sl w200" name="admin_email" value="',$options['admin_email'],'" /> 用来接收密码重设请求，请正确填写</td>
     </tr>
     <tr>
-        <td width="120" align="right"></td>
-        <td width="auto" align="left"><input type="submit" value=" 保 存 " name="submit" class="textbtn" /></td>
-    </tr>
-    <tr>
-        <td width="120" align="right">头像空间名称</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="upyun_avatar_domain" value="',$options['upyun_avatar_domain'],'" /> 需要建立两个缩略图!normal 48px 、 !mini 24px</td>
-    </tr>
-    
-    <tr>
         <td width="120" align="right">空间名称</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="upyun_domain" value="',$options['upyun_domain'],'" /> 默认留空，不能包含特殊字符:"\'<></td>
-    </tr>
-    <tr>
-        <td width="120" align="right">操作员</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="upyun_user" value="',$options['upyun_user'],'" /> 默认留空，不能包含特殊字符:"\'<></td>
-    </tr>
-    <tr>
-        <td width="120" align="right">操作员密码</td>
-        <td width="auto" align="left"><input type="text" class="sl w200" name="upyun_pw" value="',$options['upyun_pw'],'" /> 默认留空，不能包含特殊字符:"\'<></td>
+        <td width="auto" align="left"><input type="text" class="sl w200" name="SAE_STORAGE" value="',$options['SAE_STORAGE'],'" />.stor.sinaapp.com</td>
     </tr>
     <tr>
         <td width="120" align="right"></td>
         <td width="auto" align="left"><input type="submit" value=" 保 存 " name="submit" class="textbtn" /></td>
     </tr>
-    
     <tr bgcolor="#EEE" height="24">
         <td width="120" align="right"> » 扩展设置</td>
         <td width="auto" align="left"></td>

@@ -13,8 +13,8 @@ if(!$options){
         $options[$setting['title']] = $setting['value'];
     }
 
-    // 使用又拍云存头像
-    $options['base_avatar_url'] = 'http://'.$options['upyun_avatar_domain'].'.b0.upaiyun.com';
+    // 使用SAE Stroge存储头像
+    $options['base_avatar_url'] = 'http://'.$options['SAE_STORAGE'].'.stor.sinaapp.com/avatar';
 
     // 检测新增的 site_create
     if( !$options['site_create'] ){
